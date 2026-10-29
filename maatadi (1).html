@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maatadi · ಮಾತಾಡಿ</title>
+<meta name="description" content="Practical Kannada phrases with audio, voice practice and quizzes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%97%A3%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Mukta:wght@400;600&family=Noto+Serif+Kannada:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4ead6;--card:#fffaf0;--tx:#2a1912;--mu:#7a604e;--ac:#6b1424;--onac:#fff7e6;--ac2:#efe0c0;--bd:#d8c093;--gold:#a97c25;--teal:#0f5753;--low:#a3201a;--hero:#5a0f1e;--hg:#e8c778;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a0d0f;--card:#27151a;--tx:#f3e7cf;--mu:#b9a285;--ac:#d1ac5a;--onac:#1a0d0f;--ac2:#34201f;--bd:#4a2f2c;--gold:#d6b05c;--teal:#5fc2b5;--low:#ff8a7a;--hero:#3f0a15}}
+:root[data-theme="dark"]{--bg:#1a0d0f;--card:#27151a;--tx:#f3e7cf;--mu:#b9a285;--ac:#d1ac5a;--onac:#1a0d0f;--ac2:#34201f;--bd:#4a2f2c;--gold:#d6b05c;--teal:#5fc2b5;--low:#ff8a7a;--hero:#3f0a15}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Mukta,system-ui,sans-serif;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Cpath d='M14 4l10 10-10 10L4 14z' fill='none' stroke='%23a97c25' stroke-opacity='.10'/%3E%3C/svg%3E")}
+.kn{font-family:"Noto Serif Kannada","Noto Sans Kannada","Nirmala UI",serif}
+#app{max-width:640px;margin:0 auto;padding:0 16px 96px}
+h2{font:600 28px/1.15 "Cormorant Garamond",Georgia,serif;margin:22px 0 14px;color:var(--ac)}
+h2 .sk{font-size:18px;color:var(--gold);margin-left:8px}
+.sub{color:var(--mu);margin:0 0 16px}
+.hero{margin:0 -16px;padding:calc(22px + env(safe-area-inset-top,0px)) 20px 18px;background:var(--hero);color:var(--hg);text-align:center}
+.hero .pal{width:min(300px,80%);height:auto;fill:none;stroke:var(--hg);stroke-width:1.2;opacity:.9}
+.hero .ttl{font-size:46px;font-weight:700;line-height:1.3;margin-top:4px}
+.hero .en-ttl{font:600 13px "Cormorant Garamond",serif;letter-spacing:.5em;text-indent:.5em;opacity:.85}
+.hero .tag{font-size:16px;margin-top:10px;opacity:.95}
+.hero p{margin:6px auto 0;max-width:30ch;font-size:15px;color:#f3e7cf;opacity:.85}
+.zari{height:12px;margin:0 -16px;background:var(--hero) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='12'%3E%3Cpath d='M9 1l7 5-7 5-7-5z' fill='none' stroke='%23e8c778' stroke-width='1'/%3E%3C/svg%3E") repeat-x center;border-bottom:3px solid var(--gold)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:3px;box-shadow:inset 0 0 0 4px var(--card),inset 0 0 0 5px var(--bd);padding:18px 16px;cursor:pointer;text-align:left;color:var(--tx);font:inherit}
+.tile b{display:block;margin-top:10px;font:600 19px/1.2 "Cormorant Garamond",serif;color:var(--ac)}
+.tile small{color:var(--mu);display:block}
+.ico{display:inline-grid;place-items:center;width:44px;height:44px;border:1px solid var(--gold);border-radius:22px 22px 3px 3px;color:var(--gold)}
+.ico svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ico.sm{width:34px;height:34px;border-radius:17px 17px 3px 3px;vertical-align:middle;margin-right:10px}.ico.sm svg{width:19px;height:19px}
+.bar{height:3px;background:var(--bd);margin:12px 0 6px}.bar i{display:block;height:100%;background:var(--gold)}
+.ph{background:var(--card);border:1px solid var(--bd);border-left:3px solid var(--gold);border-radius:3px;padding:16px;margin-bottom:12px}
+.ph .k{font-size:23px;font-weight:600;line-height:1.55}
+.ph .t{color:var(--teal);font:italic 500 19px "Cormorant Garamond",serif}.ph .e{color:var(--mu)}
+.big{text-align:center;padding:26px 16px;border-left:1px solid var(--bd);box-shadow:inset 0 0 0 4px var(--card),inset 0 0 0 5px var(--bd)}.big .k{font-size:32px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+button.b{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--bd);background:transparent;color:var(--tx);border-radius:3px;padding:8px 14px;font:inherit;font-size:15px;cursor:pointer}
+button.b svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+button.p{background:var(--ac);border-color:var(--ac);color:var(--onac)}
+button.on{background:var(--ac2);border-color:var(--gold);color:var(--ac)}
+.back{background:none;border:0;color:var(--gold);font:inherit;cursor:pointer;padding:18px 0 0}
+.res{margin-top:12px;padding:10px 12px;background:var(--ac2);border-left:3px solid var(--gold)}
+.sc{font-weight:700}.good{color:var(--teal)}.mid{color:var(--gold)}.low{color:var(--low)}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--hero);border-top:2px solid var(--gold);display:flex;justify-content:center;padding-bottom:env(safe-area-inset-bottom,0px)}
+nav button{flex:1;max-width:210px;border:0;border-bottom:3px solid transparent;background:none;color:#cdb98f;font:inherit;font-size:14px;padding:9px 4px 7px;cursor:pointer;line-height:1.25}
+nav button span{display:block;font-size:12px;opacity:.85}
+nav button.on{color:var(--hg);border-bottom-color:var(--hg);font-weight:600}
+input[type=search]{width:100%;padding:12px 14px;border-radius:3px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit;margin-bottom:14px}
+.opt{display:block;width:100%;text-align:left;margin-top:8px;padding:12px 14px}
+.opt.right{background:var(--teal);border-color:var(--teal);color:#fff}.opt.wrong{background:var(--low);border-color:var(--low);color:#fff}
+#toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--hero);color:var(--hg);border:1px solid var(--gold);padding:10px 16px;max-width:90%;display:none;text-align:center;border-radius:3px}
+</style>
+</head>
+<body>
+<div id="app"></div><div id="toast"></div>
+<nav><button data-t="learn">Learn<span class="kn">ಕಲಿಕೆ</span></button><button data-t="cards">Phrase cards<span class="kn">ವಾಕ್ಯಗಳು</span></button><button data-t="me">Progress<span class="kn">ಪ್ರಗತಿ</span></button></nav>
+<script>
+// Content: mirrors the scenarios / phrases tables
+const SC=[
+{id:"market",en:"Market & Shopping",kn:"ಮಾರುಕಟ್ಟೆ",ph:[
+["ಇದರ ಬೆಲೆ ಎಷ್ಟು?","Idara bele eshtu?","How much is this?"],
+["ಸ್ವಲ್ಪ ಕಡಿಮೆ ಮಾಡಿ","Svalpa kadime maadi","Please reduce it a little"],
+["ಬೇಡ, ಧನ್ಯವಾದ","Beda, dhanyavaada","No, thank you"],
+["ಒಂದು ಕಿಲೋ ಕೊಡಿ","Ondu kilo kodi","Please give me one kilo"],
+["ಇದು ಬೇಕು","Idu beku","I want this"],
+["ಚಿಲ್ಲರೆ ಇದೆಯಾ?","Chillare ideyaa?","Do you have change?"]]},
+{id:"transport",en:"Transport",kn:"ಸಾರಿಗೆ",ph:[
+["ಈ ಬಸ್ ಮೆಜೆಸ್ಟಿಕ್‌ಗೆ ಹೋಗುತ್ತದೆಯೇ?","Ee bus Majestic-ge hoguttadeye?","Does this bus go to Majestic?"],
+["ಟಿಕೆಟ್ ಎಷ್ಟು?","Ticket eshtu?","How much is the ticket?"],
+["ಇಲ್ಲಿ ನಿಲ್ಲಿಸಿ","Illi nillisi","Please stop here"],
+["ಮೆಟ್ರೋ ಸ್ಟೇಷನ್ ಎಲ್ಲಿದೆ?","Metro station ellide?","Where is the metro station?"],
+["ಮುಂದಿನ ನಿಲ್ದಾಣ ಯಾವುದು?","Mundina nildaana yaavudu?","What is the next stop?"],
+["ನನಗೆ ದಾರಿ ತೋರಿಸಿ","Nanage daari torisi","Please show me the way"]]},
+{id:"health",en:"Healthcare",kn:"ಆರೋಗ್ಯ",ph:[
+["ನನಗೆ ಜ್ವರ ಇದೆ","Nanage jwara ide","I have a fever"],
+["ನನಗೆ ತಲೆನೋವು ಇದೆ","Nanage thalenovu ide","I have a headache"],
+["ನನಗೆ ಹೊಟ್ಟೆ ನೋವು ಇದೆ","Nanage hotte novu ide","I have a stomach ache"],
+["ವೈದ್ಯರನ್ನು ಕರೆಯಿರಿ","Vaidyarannu kareyiri","Please call a doctor"],
+["ಇದು ತುರ್ತು","Idu turtu","This is an emergency"],
+["ಔಷಧಿ ಅಂಗಡಿ ಎಲ್ಲಿದೆ?","Aushadhi angadi ellide?","Where is the medical shop?"]]},
+{id:"work",en:"Workplace & Daily Life",kn:"ಕೆಲಸ",ph:[
+["ನಮಸ್ಕಾರ","Namaskara","Hello"],
+["ನಿಮ್ಮ ಹೆಸರೇನು?","Nimma hesarenu?","What is your name?"],
+["ನಾಳೆ ಸಭೆ ಇದೆ","Naale sabhe ide","There is a meeting tomorrow"],
+["ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ನಿಧಾನವಾಗಿ ಮಾತನಾಡಿ","Dayavittu svalpa nidhaanavaagi maatanaadi","Please speak a little slowly"],
+["ಶೌಚಾಲಯ ಎಲ್ಲಿದೆ?","Shouchalaya ellide?","Where is the restroom?"],
+["ಅರ್ಥವಾಗಲಿಲ್ಲ","Arthavaagalilla","I didn’t understand"]]}
+];
+SC.forEach(s=>s.ph=s.ph.map((p,i)=>({id:s.id+i,sc:s.id,kn:p[0],tr:p[1],en:p[2]})));
+const ICON={
+market:`<svg viewBox="0 0 24 24"><path d="M4 10h16l-1.6 9H5.6z"/><path d="M8 10l3-5M16 10l-3-5"/></svg>`,
+transport:`<svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="12" rx="2"/><path d="M5 11h14M8 16v3M16 16v3M8.5 13.5h.01M15.5 13.5h.01"/></svg>`,
+health:`<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg>`,
+work:`<svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="1"/><path d="M9 8V5h6v3M4 13h16"/></svg>`};
+const IC={spk:`<svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 010 6"/></svg>`,mic:`<svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 00-3 3v6a3 3 0 006 0V6a3 3 0 00-3-3z"/><path d="M6 11a6 6 0 0012 0M12 17v4"/></svg>`};
+const PAL=`<svg class="pal" viewBox="0 0 320 78" aria-hidden="true"><path d="M20 78V56M300 78V56M20 56c0-12 14-12 14-24 0 12 14 12 14 24M300 56c0-12-14-12-14-24 0 12-14 12-14 24M48 78V58q0-12 18-12t18 12v20M236 78V58q0-12 18-12t18 12v20M104 78V48q0-20 56-20t56 20v30M160 28V10M160 10l-3-4M160 10l3-4M160 10v-4M124 78V56q0-14 36-14t36 14v22M10 78h300"/></svg>`;
+const ALL=SC.flatMap(s=>s.ph);
+let S={known:{},best:{},fav:{},quiz:{}};
+try{const r=localStorage.getItem("maatadi");if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+const save=()=>{try{localStorage.setItem("maatadi",JSON.stringify(S))}catch(e){}};
+let tab="learn",cur=null,mode=null,q=null,search="";
+const $=s=>document.querySelector(s),app=$("#app");
+function toast(m){const t=$("#toast");t.textContent=m;t.style.display="block";clearTimeout(toast.h);toast.h=setTimeout(()=>t.style.display="none",3200)}
+function speak(t){
+ if(!("speechSynthesis" in window))return toast("Audio isn’t supported in this browser.");
+ const v=speechSynthesis.getVoices().find(v=>v.lang.toLowerCase().startsWith("kn"));
+ const u=new SpeechSynthesisUtterance(t);u.lang="kn-IN";if(v)u.voice=v;else toast("No Kannada voice on this device. Read the transliteration instead.");
+ speechSynthesis.cancel();speechSynthesis.speak(u)}
+const norm=s=>s.toLowerCase().replace(/[\s?.,!।\u200c\u200d]/g,"");
+function sim(a,b){a=norm(a);b=norm(b);if(!a||!b)return 0;const m=[...Array(a.length+1)].map((_,i)=>[i]);for(let j=1;j<=b.length;j++)m[0][j]=j;
+ for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)m[i][j]=Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[i-1]==b[j-1]?0:1));
+ return Math.round(100*(1-m[a.length][b.length]/Math.max(a.length,b.length)))}
+const cls=n=>n>=75?"good":n>=50?"mid":"low";
+const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let rec=null;
+function practise(id){
+ const p=ALL.find(x=>x.id==id),box=$("#r-"+id),R=window.SpeechRecognition||window.webkitSpeechRecognition;
+ if(!R){box.innerHTML="<div class='res'>Voice practice needs Chrome or Edge. You can still listen and use the quiz.</div>";return}
+ if(rec){try{rec.abort()}catch(e){}rec=null}
+ const r=new R();rec=r;let got=false;
+ r.lang="kn-IN";r.interimResults=false;r.maxAlternatives=3;
+ box.innerHTML="<div class='res'>Listening. Say the phrase now.</div>";
+ const stopT=setTimeout(()=>{try{r.stop()}catch(e){}},8000);
+ r.onresult=e=>{got=true;let best=0,heard="";for(const a of e.results[0]){const x=sim(a.transcript,p.kn);if(x>=best){best=x;heard=a.transcript}}
+  S.best[id]=Math.max(S.best[id]||0,best);if(best>=60)S.known[id]=1;save();
+  box.innerHTML=`<div class='res'>Heard: <span class='kn'>${esc(heard)}</span><br>Match: <span class='sc ${cls(best)}'>${best}%</span> ${best>=75?"Very good.":best>=50?"Close. Try once more.":"Listen again, then retry."}</div>`};
+ r.onerror=e=>{got=true;box.innerHTML=`<div class='res'>${e.error=="not-allowed"||e.error=="service-not-allowed"?"Microphone permission is blocked. Allow it in your browser settings and try again.":e.error=="no-speech"?"I didn\u2019t hear anything. Tap Practise and try again.":e.error=="network"?"Voice recognition needs an internet connection.":e.error=="language-not-supported"?"Kannada voice recognition isn\u2019t available on this device.":"Couldn\u2019t hear that. Try again."}</div>`};
+ r.onnomatch=()=>{got=true;box.innerHTML="<div class='res'>Couldn\u2019t understand that. Try again, a little slower.</div>"};
+ r.onend=()=>{clearTimeout(stopT);if(rec===r)rec=null;if(!got)box.innerHTML="<div class='res'>Nothing heard. Tap Practise and try again.</div>"};
+ try{r.start()}catch(e){box.innerHTML="<div class='res'>Couldn\u2019t start the microphone. Try again.</div>"}}
+function phrase(p){return `<div class="ph"><div class="k kn">${p.kn}</div><div class="t">${p.tr}</div><div class="e">${p.en}</div>
+<div class="row"><button class="b" onclick="speak('${p.kn}')">${IC.spk} Listen</button><button class="b p" onclick="practise('${p.id}')">${IC.mic} Practise</button>
+<button class="b ${S.known[p.id]?"on":""}" onclick="tog('known','${p.id}')">${S.known[p.id]?"Learned":"Mark learned"}</button>
+<button class="b ${S.fav[p.id]?"on":""}" onclick="tog('fav','${p.id}')">${S.fav[p.id]?"Saved":"Save"}</button></div><div id="r-${p.id}"></div></div>`}
+function tog(k,id){S[k][id]?delete S[k][id]:S[k][id]=1;save();render()}
+const prog=s=>s.ph.filter(p=>S.known[p.id]).length;
+function learn(){
+ if(!cur)return `<header class="hero">${PAL}<div class="ttl kn">ಮಾತಾಡಿ</div><div class="en-ttl">MAATADI</div><div class="tag kn">ಕನ್ನಡ ಕಲಿಯಿರಿ</div><p>Practical Kannada for the situations you meet every day.</p></header><div class="zari"></div><h2>Choose a situation</h2><div class="grid">`+
+ SC.map(s=>`<button class="tile" onclick="cur='${s.id}';render()"><span class="ico">${ICON[s.id]}</span><b>${s.en}</b><small class="kn">${s.kn}</small><div class="bar"><i style="width:${prog(s)/s.ph.length*100}%"></i></div><small>${prog(s)} of ${s.ph.length} learned${S.quiz[s.id]!=null?" · quiz "+S.quiz[s.id]+"/5":""}</small></button>`).join("")+`</div>`;
+ const s=SC.find(x=>x.id==cur);
+ if(mode=="quiz")return quiz(s);
+ return `<button class="back" onclick="cur=null;render()">← All situations</button><h2><span class="ico sm">${ICON[s.id]}</span>${s.en}<span class="sk kn">${s.kn}</span></h2>`+s.ph.map(phrase).join("")+`<button class="b p" style="width:100%;justify-content:center;padding:14px" onclick="startQuiz()">Take the quiz</button>`}
+function startQuiz(){const s=SC.find(x=>x.id==cur);const ps=[...s.ph].sort(()=>Math.random()-.5).slice(0,5);
+ q={i:0,score:0,picked:null,items:ps.map(p=>({p,o:[p.en,...ALL.filter(x=>x.en!=p.en).sort(()=>Math.random()-.5).slice(0,3).map(x=>x.en)].sort(()=>Math.random()-.5)}))};mode="quiz";render()}
+function quiz(s){
+ if(q.i>=q.items.length){S.quiz[s.id]=Math.max(S.quiz[s.id]||0,q.score);save();
+  return `<div class="ph big"><h2 style="margin-top:0">Quiz complete</h2><div class="k sc ${cls(q.score*20)}">${q.score}/5</div><p class="e">${q.score>=4?"Well done. You are ready for this situation.":"Review the phrases and try again."}</p><div class="row" style="justify-content:center"><button class="b" onclick="mode=null;render()">Back to phrases</button><button class="b p" onclick="startQuiz()">Retry</button></div></div>`}
+ const it=q.items[q.i];
+ return `<button class="back" onclick="mode=null;render()">← Back</button><p class="sub">Question ${q.i+1} of 5</p><div class="ph big"><div class="k kn">${it.p.kn}</div><div class="t">${it.p.tr}</div><div class="row" style="justify-content:center"><button class="b" onclick="speak('${it.p.kn}')">${IC.spk} Listen</button></div></div>`+
+ it.o.map(o=>{let c="";if(q.picked!=null)c=o==it.p.en?"right":o==q.picked?"wrong":"";return `<button class="b opt ${c}" ${q.picked!=null?"disabled":""} onclick="pick(this.dataset.o)" data-o="${o.replace(/"/g,"&quot;")}">${o}</button>`}).join("")+
+ (q.picked!=null?`<div class="row"><button class="b p" onclick="q.i++;q.picked=null;render()">Next</button></div>`:"")}
+function pick(o){const it=q.items[q.i];q.picked=o;if(o==it.p.en)q.score++;render()}
+function cards(){
+ const l=ALL.filter(p=>!search||(p.kn+p.tr+p.en).toLowerCase().includes(search.toLowerCase()));
+ return `<h2>Phrase cards<span class="sk kn">ವಾಕ್ಯಗಳು</span></h2><input type="search" id="se" placeholder="Search a situation or phrase (English)" value="${esc(search)}" oninput="search=this.value;render(true)">`+
+ (l.length?l.map(p=>`<div class="ph big"><div class="k kn">${p.kn}</div><div class="t">${p.tr}</div><div class="e">${p.en}</div><div class="row" style="justify-content:center"><button class="b" onclick="speak('${p.kn}')">${IC.spk} Listen</button></div></div>`).join(""):"<p class='sub'>No phrases match.</p>")}
+function me(){
+ const k=Object.keys(S.known).length,sc=Object.keys(S.best).length,avg=sc?Math.round(Object.values(S.best).reduce((a,b)=>a+b,0)/sc):0,f=ALL.filter(p=>S.fav[p.id]);
+ return `<h2>Your progress<span class="sk kn">ಪ್ರಗತಿ</span></h2><div class="grid"><div class="tile"><b style="margin-top:0;font-size:30px">${k}/${ALL.length}</b><small>phrases learned</small></div><div class="tile"><b style="margin-top:0;font-size:30px">${avg}%</b><small>average pronunciation match</small></div></div>
+ <h2>Saved phrases</h2>`+(f.length?f.map(phrase).join(""):"<p class='sub'>Use Save on any phrase to keep it here.</p>")+
+ `<div class="row"><button class="b" onclick="if(confirm('Reset all progress?')){S={known:{},best:{},fav:{},quiz:{}};save();render()}">Reset progress</button></div>`}
+function render(keep){
+ document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.t==tab));
+ app.innerHTML=tab=="learn"?learn():tab=="cards"?cards():me();
+ if(keep){const e=$("#se");if(e){e.focus();e.setSelectionRange(e.value.length,e.value.length)}}}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{tab=b.dataset.t;cur=null;mode=null;render();scrollTo(0,0)});
+if("speechSynthesis" in window){speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>speechSynthesis.getVoices()}
+render();
+</script>
+</body>
+</html>
